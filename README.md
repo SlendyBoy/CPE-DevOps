@@ -113,3 +113,12 @@ Résultats
 ![alt text](./images/image-22.png)
 
 ![alt text](./images/image-23.png)
+
+
+### Deploy
+
+fichier workflow:  
+![alt text](./images/image-workflow.png)
+
+Résultat workflow:  
+![alt text](./images/image-pipeline.png)
