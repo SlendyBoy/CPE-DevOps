@@ -27,6 +27,10 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Add SSH key to known_hosts
+    run: |
+      ssh-keyscan -H tanguy.frouin.takima.cloud >> ~/.ssh/known_hosts
+
 
     - name: Run Ansible Playbook
       run: ansible-playbook -i ./my-project/ansible/inventories/setup.yml ./my-project/ansible/playbook.yml
