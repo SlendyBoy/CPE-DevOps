@@ -28,8 +28,8 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Add SSH key to known_hosts
-    run: |
-      ssh-keyscan -H tanguy.frouin.takima.cloud >> ~/.ssh/known_hosts
+      run: |
+        ssh-keyscan -H tanguy.frouin.takima.cloud >> ~/.ssh/known_hosts
 
 
     - name: Run Ansible Playbook
