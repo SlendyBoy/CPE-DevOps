@@ -95,6 +95,7 @@ Ajout du rôle dans le playbook
 ![alt text](./images/image-18.png)
 
 Modification des tasks pour chaque rôle `launch-x`:  
+Ajout de `pull` et de `recreate` à `true` pour update l'image docker si elle existe  
   
 launch-front  
 ![alt text](./images/image-17.png)
