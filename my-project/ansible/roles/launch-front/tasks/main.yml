@@ -1,0 +1,10 @@
+---
+# tasks file for roles/launch-front
+- name: Run Front
+  docker_container:
+    name: frontend
+    pull: true
+    recreate: true
+    networks:
+    - name: networkDevops
+    image:  scorpion6912/tp2-devops-frontend

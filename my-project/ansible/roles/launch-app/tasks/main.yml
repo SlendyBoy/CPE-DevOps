@@ -1,0 +1,15 @@
+---
+# tasks file for roles/launch-app
+- name: Run backend
+  docker_container:
+    name: simpleapistud
+    image: scorpion6912/tp2-devops-simple-api-student-main:latest
+    pull: true
+    recreate: true
+    networks:
+    - name: networkDevops
+    env:
+      password: "{{ POSTGRES_PASSWORD }}"
+      username: "{{ POSTGRES_USER }}"
+      db: "{{ POSTGRES_DB }}"
+      url: "{{ URL }}"

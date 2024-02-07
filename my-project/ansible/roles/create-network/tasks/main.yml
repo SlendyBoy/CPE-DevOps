@@ -1,0 +1,6 @@
+---
+# tasks file for roles/create-network
+- name: create network
+  community.docker.docker_network:
+    name: networkDevops
+    state: present

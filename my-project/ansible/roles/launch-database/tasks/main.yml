@@ -1,0 +1,15 @@
+---
+# tasks file for roles/launch-database
+- name: Run BDD
+  docker_container:
+    name: tp1bdd
+    image: scorpion6912/tp2-devops-database:latest
+    pull: true
+    recreate: true
+    networks:
+    - name: networkDevops
+    env:
+      password: "{{ POSTGRES_PASSWORD }}"
+      username: "{{ POSTGRES_USER }}"
+      db: "{{ POSTGRES_DB }}"
+      url: "{{ URL }}"

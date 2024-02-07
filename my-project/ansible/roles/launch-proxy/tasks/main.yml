@@ -1,0 +1,13 @@
+---
+# tasks file for roles/launch-proxy
+- name: Run HTTPD
+  docker_container:
+    name: httpd-1
+    image: scorpion6912/tp2-devops-http-front:latest
+    pull: true
+    recreate: true
+    networks:
+    - name: networkDevops
+    ports: 
+    - "80:80"
+    - "8080:8080"
