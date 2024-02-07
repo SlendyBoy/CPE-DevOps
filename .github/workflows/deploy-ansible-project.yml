@@ -33,5 +33,5 @@ jobs:
 
 
     - name: Run Ansible Playbook
-      run: ansible-playbook -i ./my-project/ansible/inventories/setup.yml ./my-project/ansible/playbook.yml --ssh-common-args='-o StrictHostKeyChecking=no'
+      run: ansible-playbook -i ./my-project/ansible/inventories/setup.yml ./my-project/ansible/playbook.yml
       
